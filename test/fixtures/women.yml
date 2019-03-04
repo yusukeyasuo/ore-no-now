@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  last_name: MyString
+  first_name: MyString
+  height: 1.5
+  weight: 1.5
+  blood_type: 1
+  prefecture_id: 1
+  address: MyString
+  hobby: MyString
+  skill: MyString
+  progress: 1
+
+two:
+  user_id: 1
+  last_name: MyString
+  first_name: MyString
+  height: 1.5
+  weight: 1.5
+  blood_type: 1
+  prefecture_id: 1
+  address: MyString
+  hobby: MyString
+  skill: MyString
+  progress: 1
