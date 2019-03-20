@@ -1,0 +1,54 @@
+<div id="women-new" class="row">
+  <div class="col-md-8 offset-md-2">
+    <%= form_with url: women_path do |form| %>
+      <div class="form-group">
+        <label>姓名</label>
+        <div class="form-row">
+          <div class="col">
+            <%= form.text_field :last_name, class: "form-control", placeholder: "姓" %>
+          </div>
+          <div class="col">
+            <%= form.text_field :first_name, class: "form-control", placeholder: "名" %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>身長</label>
+        <%= form.select :height, Woman.heights_i18n.keys.map { |k| [Woman.heights_i18n[k], k]}, {}, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <label>体重</label>
+        <%= form.select :weight, Woman.weights_i18n.keys.map { |k| [Woman.weights_i18n[k], k]}, {}, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <label>血液型</label>
+        <%= form.select :blood_type, Woman.blood_types_i18n.keys.map { |k| [Woman.blood_types_i18n[k], k]}, {}, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <label>都道府県</label>
+        <%= form.select :prefecture_id, @prefectures, {}, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <label>住所</label>
+        <%= form.text_field :address, class: "form-control", placeholder: "住所" %>
+      </div>
+      <div class="form-group">
+        <label>趣味</label>
+        <%= form.text_field :hobby, class: "form-control", placeholder: "趣味" %>
+      </div>
+      <div class="form-group">
+        <label>特技</label>
+        <%= form.text_field :skill, class: "form-control", placeholder: "特技" %>
+      </div>
+      <div class="form-group">
+        <label>進捗</label>
+        <%= form.number_field :skill, class: "form-control", placeholder: "1〜10" %>
+      </div>
+      <%= form.submit '保存', :class => "btn btn-primary" %>
+    <% end %>
+    <br>
+    <div class="form-group">
+      <button class="btn btn-danger">削除</button>
+    </div>
+  </div>
+</div>

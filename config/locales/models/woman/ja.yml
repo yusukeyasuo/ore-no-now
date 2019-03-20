@@ -1,0 +1,23 @@
+ja:
+  activerecord:
+    models:
+      woman: 女性情報
+    attributes:
+      woman:
+        height: 身長
+        weight: 体重
+  enums:
+    woman:
+      height:
+        low: 低め
+        avg: 普通
+        high: 高め
+      weight:
+        light: 軽め
+        normal: 普通
+        heavy: 重め
+      blood_type:
+        a: A型
+        b: B型
+        o: O型
+        ab: AB型

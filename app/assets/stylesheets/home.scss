@@ -1,3 +1,46 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#home-index {
+  margin-top: 40px;
+  
+  // 角丸のプロフィールアイコン
+  .profile-icon {
+    display: inline-block;
+    width: 125px;
+    height: 125px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .balloon {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #e0edff;
+    :before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      margin-left: -15px;
+      border: 15px solid transparent;
+      border-bottom: 15px solid #e0edff;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

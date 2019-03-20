@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_074426) do
+ActiveRecord::Schema.define(version: 2019_03_20_081826) do
+
+  create_table "prefectures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.integer "sort_order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "user_actions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -37,8 +44,8 @@ ActiveRecord::Schema.define(version: 2019_03_14_074426) do
     t.integer "user_id"
     t.string "last_name"
     t.string "first_name"
-    t.float "height"
-    t.float "weight"
+    t.integer "height"
+    t.integer "weight"
     t.integer "blood_type"
     t.integer "prefecture_id"
     t.string "address"
